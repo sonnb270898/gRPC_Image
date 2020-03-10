@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+
+
+service testImage{
+	rpc SendImage(ImageRequest) returns (ImageReply){}
+}
+
+
+message ImageRequest{
+	bytes img = 1;
+}
+
+message ImageReply{
+	bytes image = 1;
+}
